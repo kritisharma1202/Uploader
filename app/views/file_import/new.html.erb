@@ -1,0 +1,10 @@
+
+<h3>Import Excel File</h3>
+
+<%= form_for @user, url: {controller: :file_import, action: :show}, multipart: true do |f| %>
+
+  <%= f.label :ImportExcel %>
+  <%= f.file_field :ImportExcel %>
+
+  <%= f.submit 'Import Excel'%>
+<% end %>

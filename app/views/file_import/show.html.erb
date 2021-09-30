@@ -1,0 +1,28 @@
+
+<p>
+  Total Number of Records In Excel Sheet = <%= @row_count %>
+  <br>
+  Total Number of Records Imoprted Succesfully = <%= @new_count %>
+  <br>
+  Total Number of Records failed to Import = <%= @error_count %>
+  <br>
+  <p>
+  <% @error_msgs.each do |msg| %>
+    <%= msg %><br>
+  <% end %>
+  </p>
+</p>
+<table>
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>email_id</th>
+  </tr>
+  <% @user.each do |user|%>
+  <tr>
+    <td><%= user.FIRST_NAME%></td>
+    <td><%= user.LAST_NAME%></td>
+    <td><%= user.EMAIL_ID%></td>
+  </tr>
+  <% end %>
+</table>
